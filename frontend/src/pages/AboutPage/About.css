@@ -1,0 +1,128 @@
+:root {
+  --primary-color: #0077b6;
+  --secondary-color: #eaeaea;
+  --font-size-large: 1.2rem;
+}
+
+.fade-in {
+  animation: fade-in 5s 1;
+  animation-fill-mode: backwards;
+  animation-delay: 0s;
+}
+
+.delay2.fade-in {
+  animation-delay: 2s !important;
+}
+.delay3.fade-in {
+  animation-delay: 4s !important;
+  font-size: 2.5rem;
+}
+.delay4.fade-in {
+  animation-delay: 5s !important;
+}
+.delay6.fade-in {
+  animation-delay: 6s !important;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.about-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5;
+}
+
+.about-cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.titles h1 {
+  font-size: 3rem;
+  color: var(--primary-color);
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.titles h1:last-of-type {
+  font-size: 2rem;
+}
+
+#about-about {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  font-size: var(--font-size-large);
+  color: var(--secondary-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media (max-width: 600px) {
+  .about-container {
+    padding: 1rem;
+  }
+
+  .titles h1 {
+    font-size: 2.5rem;
+  }
+
+  .titles h1:last-of-type {
+    font-size: 1.5rem;
+  }
+
+  #about-about {
+    font-size: 1rem;
+  }
+}
+
+.gear-icon {
+  width: 100%;
+}
+
+.stage {
+  border-bottom: 5px solid #444;
+  display: flex;
+  height: 16px;
+  width: 95%;
+  justify-content: flex-end;
+  scroll-margin-block-start: -3.1rem;
+}
+.brain {
+  align-self: flex-end;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  
+  height: 220px;
+  margin: 10 auto 0 auto;
+  transform-origin: bottom;
+  width: 220px;
+}
+.bounce-7 {
+  animation-name: bounce-7;
+  animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+}
+@keyframes bounce-7 {
+  0%   { transform: scale(1,1)      translateY(0); }
+  10%  { transform: scale(1.1,.9)   translateY(0); }
+  30%  { transform: scale(.9,1.1)   translateY(-100px); }
+  50%  { transform: scale(1.05,.95) translateY(0); }
+  57%  { transform: scale(1,1)      translateY(-7px); }
+  64%  { transform: scale(1,1)      translateY(0); }
+  100% { transform: scale(1,1)      translateY(0); }
+}

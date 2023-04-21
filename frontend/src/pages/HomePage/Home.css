@@ -1,0 +1,173 @@
+
+h1.welcome-text  {
+  font-kerning: none;
+  text-shadow: none;
+  font-weight: light; 
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  color: white;
+  text-align: center;
+  padding-top: 7px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  height: 2rem;
+  font-size: medium;
+  align-items: top;
+  opacity: .33;
+}
+section.center-section {
+  justify-content: center;
+}
+.search-feed-container {
+  min-height: 100vh;
+  height: max-content;
+  max-height: 200vh;
+}
+
+.board-feed-container {
+  position: fixed;
+}
+.outer-board-container {
+  padding: 2.5rem 3.5rem;
+}
+.outerBoard {
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+#board-matte {
+  justify-content: center;
+  width: 664px;
+  display: grid;
+  /* width: 624px; */
+  min-height: 850px;
+  height: 70vh;
+  max-height: 80vh;
+  background-color: rgb(197, 174, 134, 0.3);
+
+  border: 4px solid #645050;
+  border-radius: 12px;
+}
+.layout-top {
+  justify-content: center;
+}
+
+.whiteHeader {
+  margin: 1.2rem;
+  text-align: right;
+  font-weight: 500;
+  font-kerning: none;
+  font-family: Helvetica, sans-serif;
+  padding-top: 1.5rem;
+  color: rgb(255, 255, 255);
+  text-shadow: 4px 0px 20px rgb(132, 132, 132);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.blackHeader {
+  text-align: left;
+  font-kerning: none;
+  font-weight: bold;
+  position: relative;
+  margin-bottom: 0.5rem;
+  color: rgb(0, 0, 0);
+  text-shadow: 2px 0px 10px rgb(116, 116, 116);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.buttons {
+  margin-block-start: 1.5rem;
+  margin-right: 4px;
+  width: 90%;
+}
+.moves.inline {
+  border-radius: 7px;
+  /* background: rgb(236, 236, 236, .92); */
+  background-color: rgba(230, 226, 226, 0.65);
+  margin-block-start: 2rem;
+  padding: 12px;
+  min-height: 5rem;
+  text-align: left;
+}
+
+.moves.inline:hover {
+  background-color: rgba(231, 229, 229, 0.95);
+}
+.boardAnd {
+  font-family: "Helvetica", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  padding: 0;
+}
+
+.board-container {
+  border: 2px hidden grey;
+  border-radius: 5px;
+  min-height: fit-content;
+  height: 855px;
+  max-height: 90vh;
+  justify-items: stretch;
+}
+
+.center-section #fade-out {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  height: 2rem;
+  animation: fade-out 5s 1;
+  -webkit-animation: fade-out 5s 1;
+  -moz-animation: fade-out 5s 1;
+  -o-animation: fade-out 5s 1;
+  -ms-animation: fade-out 5s 1;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+  -webkit-animation-delay: 1s;
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: .8;
+  }
+}
+
+@-moz-keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: .8;
+  }
+}
+
+@-webkit-keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: .8;
+  }
+}
+
+@-o-keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: .8;
+  }
+}
+
+@-ms-keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: .8;
+  }
+}
