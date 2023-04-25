@@ -63,7 +63,7 @@ function AnalyzePage() {
             "Black",
             user.username,
             "Result",
-            "_-_",
+            "",
             "WhiteElo",
             "____",
             "BlackElo",
