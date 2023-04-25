@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './gamefeed.css';
 import { FaHeart, FaRegHeart } from 'react-icons/fa';
 import axios from 'axios';
+import { URL_HOST } from '../../urlHost';
 
 
 const GameCardMaker = ({ id, playerWhite, playerBlack, eloWhite, eloBlack, date, eco, moves }) => {
@@ -12,7 +13,7 @@ const GameCardMaker = ({ id, playerWhite, playerBlack, eloWhite, eloBlack, date,
   useEffect(() => {
     async function getPGNbyID(id) {
       try {
-        const response = await axios.get(`http://127.0.0.1:8000/api/pgn/${id}/`, { headers: { Authorization: `Bearer ${JSON.parse(localStorage.getItem("token"))}` } });
+        const response = await axios.get(`${URL_HOST}/api/pgn/${id}/`, { headers: { Authorization: `Bearer ${JSON.parse(localStorage.getItem("token"))}` } });
         setIsFavorite(response.data.is_favorite);
       } catch (error) {
         console.log(error.message)
@@ -23,7 +24,7 @@ const GameCardMaker = ({ id, playerWhite, playerBlack, eloWhite, eloBlack, date,
 
   async function patchPGN(pgnId) {
     try {
-      const response = await axios.patch(`http://127.0.0.1:8000/api/pgn/favorites/${pgnId}/`, {}, { headers: { Authorization: `Bearer ${JSON.parse(localStorage.getItem("token"))}` } });
+      const response = await axios.patch(`${URL_HOST}/api/pgn/favorites/${pgnId}/`, {}, { headers: { Authorization: `Bearer ${JSON.parse(localStorage.getItem("token"))}` } });
       setIsFavorite(response.data.pgn_favorite.is_favorite);
     } catch (error) {
       console.log(error.message)
@@ -54,9 +55,7 @@ const GameCardMaker = ({ id, playerWhite, playerBlack, eloWhite, eloBlack, date,
               </td>
             </tr>
             <tr className='vs-container'>
-              
               <th className='vs' colSpan={3}>vs</th>
-              
             </tr>
             <tr>
               <td className='cell-text'>Black

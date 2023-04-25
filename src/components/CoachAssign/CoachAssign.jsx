@@ -3,8 +3,8 @@ import React, { useEffect, useState } from 'react';
 import { HiArrowNarrowRight } from 'react-icons/hi';
 import Dropdown from '../Dropdown/Dropdown';
 import '../Dropdown/Dropdown.css';
-import './coach.css'
-
+import './coach.css';
+import { URL_HOST } from '../../urlHost';
 
 const CoachAssignPGN = ({ pgn, id }) => {
 
@@ -16,10 +16,9 @@ const CoachAssignPGN = ({ pgn, id }) => {
     const mystring = "________";
 
 
-
     async function fetchStudents() {
         try {
-            const response = await axios.get("http://127.0.0.1:8000/api/auth/", { headers: { Authorization: `Bearer ${JSON.parse(localStorage.getItem("token"))}` } });
+            const response = await axios.get(`${URL_HOST}/api/auth/`, { headers: { Authorization: `Bearer ${JSON.parse(localStorage.getItem("token"))}` } });
             setStudents(response.data.filter(student => student.is_student));
         } catch (error) {
             console.log(error.message)
@@ -42,7 +41,7 @@ const CoachAssignPGN = ({ pgn, id }) => {
 
     const postPGN = async () => {
         const pgn = { "pgn": PGN }
-        const response = await axios.post("http://127.0.0.1:8000/api/pgn/", pgn, { headers: { Authorization: `Bearer ${JSON.parse(localStorage.getItem("token"))}` } });
+        const response = await axios.post(`${URL_HOST}/api/pgn/`, pgn, { headers: { Authorization: `Bearer ${JSON.parse(localStorage.getItem("token"))}` } });
         if (response && response.data) {
             const pgnId = response.data.id;
             await patchPGN(studentId, pgnId);
@@ -53,7 +52,7 @@ const CoachAssignPGN = ({ pgn, id }) => {
 
     async function patchPGN(studentId, pgnId) {
         try {
-            const response = await axios.patch(`http://127.0.0.1:8000/api/pgn/assign/${studentId}/${pgnId}/`, {}, { headers: { Authorization: `Bearer ${JSON.parse(localStorage.getItem("token"))}` } });
+            const response = await axios.patch(`${URL_HOST}/api/pgn/assign/${studentId}/${pgnId}/`, {}, { headers: { Authorization: `Bearer ${JSON.parse(localStorage.getItem("token"))}` } });
             console.log(response.data)
         } catch (error) {
             console.log(error.message)

@@ -3,10 +3,9 @@ import '../../components/GameFeed/gamefeed.css'
 import { Link } from 'react-router-dom';
 
 
-
 const ThirdPartyMapper = ({ games }) => {
 
-    // Return the feed of Chess.com search results
+    // Returns feed of Chess.com search results
 
     return (
         <div className="s-game-card-container">
@@ -44,7 +43,6 @@ const ThirdPartyMapper = ({ games }) => {
                                     <label>View Game</label>
                                 </div>
                             </div>
-
                         </div>
                     </Link>
                 ))}

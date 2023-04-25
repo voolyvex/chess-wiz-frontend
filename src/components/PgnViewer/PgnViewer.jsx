@@ -31,7 +31,7 @@ function PGNViewer(props) {
         coordsInner: false,
         coordsFactor: '1',
         coordsFontSize: '10',
-        colorMarker:  'square',
+        colorMarker: 'square',
         hideMovesBefore: false,
         notation: 'short',
         notationLayout: 'inline',

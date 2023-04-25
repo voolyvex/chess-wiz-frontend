@@ -2,6 +2,7 @@ import { createContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import jwtDecode from "jwt-decode";
+import { URL_HOST } from "../urlHost";
 
 const AuthContext = createContext();
 
@@ -16,12 +17,12 @@ function setUserObject(user) {
     id: user.user_id,
     first_name: user.first_name,
     is_coach: user.is_coach,
-    is_student: user.is_student
+    is_student: user.is_student,
   };
 }
 
 export const AuthProvider = ({ children }) => {
-  const BASE_URL = "http://127.0.0.1:8000/api/auth";
+  const BASE_URL = `${URL_HOST}/api/auth`;
   const userToken = JSON.parse(localStorage.getItem("token"));
   const decodedUser = userToken ? jwtDecode(userToken) : null;
   const [token, setToken] = useState(userToken);

@@ -13,7 +13,6 @@ const Navbar = () => {
       <ul className="nav-items">
         <div className="brand">
           <Link to="/" style={{ textDecoration: "none", color: "white" }}>
-
             <FaChessRook className="icon-rook" />
             <FaHatWizard className="icon-hat" />
             <h2>Chess<b className="italic">Wiz</b></h2>

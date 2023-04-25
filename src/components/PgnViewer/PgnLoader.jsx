@@ -4,6 +4,7 @@ import PGNViewer from './PgnViewer';
 import axios from 'axios';
 import CoachAssignPGN from '../CoachAssign/CoachAssign';
 import useAuth from "../../hooks/useAuth";
+import { URL_HOST } from '../../urlHost';
 
 
 const PgnLoader = ({ props }) => {
@@ -40,12 +41,11 @@ const PgnLoader = ({ props }) => {
     if (!idChecker(id)) {
       const fetchPgn = async () => {
         try {
-          const response = await axios.get(`http://127.0.0.1:8000/api/pgn/`, {
+          const response = await axios.get(`${URL_HOST}/api/pgn/`, {
             headers: {
               Authorization: `Bearer ${JSON.parse(localStorage.getItem('token'))}`,
             },
           });
-          // setGames(response.data);
           filterGames(response.data)
         } catch (error) {
           console.log(error.message);
