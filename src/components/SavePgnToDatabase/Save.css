@@ -1,0 +1,147 @@
+.save-label {
+  width: auto;
+  max-height: 564px;
+}
+.form-container {
+  min-height: 155px;
+  
+  max-height:700px;
+  width: auto;
+}
+
+.save-form:hover {
+  opacity: 92%;
+}
+.save-form {
+  border-color: #373434;
+  min-height: inherit;
+  border-width: 4px;
+  border-radius: 8px;
+  border-style: outset;
+  padding: 4px;
+  opacity: 90%;
+  height: auto;
+  max-height: 564px;
+  width: fit-content;
+  background-color: transparent;
+}
+textarea:hover {
+  cursor: text;
+}
+textarea[name="post"] {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  font-size: 12pt;
+  font-kerning: none;
+  color: white;
+  resize: vertical;
+  width: 310px;
+  min-height: 110px;
+  height: 310px;
+  max-height: 510px;
+  border-width: 2px;
+  border-radius: 5px;
+  border-bottom-right-radius: 0;
+  border-style: hidden;
+  border-color: #373434;
+  padding: 5px;
+  padding-left: 9px;
+  vertical-align: bottom;
+  clear: right;
+  background-color: transparent;
+  opacity: 80%;
+  overflow: hidden;
+}
+.form-title {
+  width: auto;
+  font-weight: 500;
+  padding-right: 2rem;
+}
+.save-title {
+  width: 3rem;
+  text-align: right;
+  margin-right: 0;
+  padding-left: 2rem;
+  font-weight: 500;
+}
+button.save-button {
+  margin-left: 0;
+}
+.save-button {
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  border-color: #0077b6;
+  border-radius: 3px;
+  border-width: 2px;
+  width: 2.4rem;
+  color: #327ceb;
+  height: 26px;
+  margin-left: 0;
+  
+  margin-top: 0;
+  box-shadow: 1px 2px 5px black;
+  padding: 1px;
+  
+  
+}
+.save-button:hover {
+  padding: 2px;
+  background-color: #327ceb;
+  border: 0px inset wheat;
+  border-radius: 2.5px;
+  border-style: solid;
+  opacity: 99%;
+  box-shadow: 0px 1px 1px wheat;
+  color: white;
+}
+.save-button:active {
+  padding: 4px;
+  background-color: #327ceb;
+  border: 0px groove rgb(230, 226, 226);
+  border-radius: inherit;
+  opacity: 100%;
+}
+
+.save-div {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12pt;
+  font-kerning: none;
+  color: white;
+  opacity: 70%;
+  margin-top: 1px;
+  height: 2.5em;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: .5em;
+  background: black;
+  border-style:inset;
+  border-radius: 10px;
+  border-top-left-radius: 1px;
+  border-top-right-radius: 1px;
+  border-width: 3px;
+  border-color: #373434;
+  padding-inline-end: 0;
+  margin-block-start: 1px;
+  padding-bottom: 2px;
+}
+
+.save-dropdown:hover {
+  opacity: 92%;
+}
+.save-dropdown {
+  
+  max-width: 217px;
+  height: auto;
+  text-align: left;
+  text-indent: 2px;
+  border: 1px solid #ccc;
+  position: static;
+  border-radius: 5px;
+  margin-block-start: 1px;
+  margin-right: 3.1rem;
+  margin-left: auto;
+}

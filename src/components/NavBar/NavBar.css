@@ -1,0 +1,125 @@
+ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  
+}
+li {
+  font-size: 1.25rem;
+}
+
+.navBar {
+  background: linear-gradient(
+    to bottom right,
+    transparent,
+    steelblue,
+    steelblue,
+    transparent
+    );
+    opacity: 99%;
+    box-shadow: 4px 2px 5px transparent;
+    color: white;
+    margin-bottom: 2rem;
+    padding: 1.5rem 0rem;
+    padding-left: 2rem;
+    
+  }
+  
+  ul.nav-items {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: last baseline;
+  margin: auto;
+  padding: auto;
+  column-gap: 1rem;
+}
+
+.navBar button {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 0.4rem 0.5rem;
+  position: relative;
+}
+
+.navBar button:hover {
+  background: white;
+  color: steelblue;
+  cursor: pointer;
+}
+
+.italic {
+  font-style: italic;
+}
+.brand {
+  justify-content: center;
+}
+a.brand:hover {
+  cursor: pointer;
+}
+.icon-hat {
+  opacity: 50%;
+  color: aqua;
+}
+.icon-rook {
+  opacity: 55%;
+  color: aquamarine;
+}
+.brand {
+  display: flex;
+  margin: auto;
+  padding: auto;
+  
+  width: 40%;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 0.6;
+}
+.navlinks {
+  
+  display: flex;
+  margin-inline-end: 3rem;
+  min-width: 10%;
+  width: 20%;
+  max-width: 70%;
+  justify-content: space-between;
+  
+}
+.logged {
+  
+  display: flex;
+  justify-content: center;
+  width: 40%;
+  column-gap: 1em;
+  
+}
+li.navlinks {
+  background-color: transparent;
+  color: #fff;
+  
+  text-decoration: none;
+}
+.navlink {
+  margin:auto;
+}
+li.navlink {
+  background-color: transparent;
+  color: #fff;
+  border: 2px hidden;
+  padding: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  opacity: 75%;
+  transition: all 0.6s ease-out;
+}
+li.navlink:hover,
+li.navlink:focus {
+  background-color: transparent;
+  color: black;
+  border-radius: 10px;
+  opacity: 45%;
+}
+.loggedin {
+  padding-right: 0;
+  text-align: right;
+}

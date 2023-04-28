@@ -1,0 +1,56 @@
+.play-page {
+  width:1000px;
+  height: 650px;
+  display: flex;
+  align-items: auto;
+  justify-content: space-between;
+  left: 0;
+  right: 0;
+  margin: auto;
+  overflow: hidden;
+  position: absolute;
+}
+
+.play-container {
+  height: 564px;
+  margin: 0 auto;
+  padding: 0;
+  float: left; 
+  border: 3px solid rgb(100, 80, 80);
+  border-radius: 2px;
+  box-shadow: 2px 2px 2px rgb(30, 30, 30), -2px -2px 2px rgb(100, 80, 80);
+
+}
+
+.play {
+  width: auto;
+  height: auto;
+}
+
+
+.save-container {
+  margin: auto;
+  padding: auto;
+  float: right;
+  margin-block-start: 0;
+  
+}
+
+
+@media screen and (max-width: 1230px) {
+  footer {
+    width: auto;
+  }
+  .play-page {
+    display: grid;
+    margin-left: 25% ;
+    width: 100%;
+    row-gap: 1em;
+    height:auto;
+  }
+  .save-container {
+    margin-left: 13%;
+    padding: auto;
+    overflow: hidden;
+  }
+}
