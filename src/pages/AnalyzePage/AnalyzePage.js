@@ -1,6 +1,7 @@
+import React, { useState } from "react";
 import SavePgnToDatabase from "../../components/SavePgnToDatabase/SavePgnToDatabase";
 import "../PlayPage/Play.css";
-import React, { useEffect, useState } from "react";
+import Engine from "../../components/Engine/Engine";
 import { Chessboard } from "react-chessboard";
 import { Chess } from "chess.js";
 import useAuth from "../../hooks/useAuth";
@@ -45,6 +46,9 @@ function AnalyzePage() {
       <div className="play-container">
         <div className="play">
           <Chessboard position={game.fen()} onPieceDrop={onDrop} />
+        </div>
+        <div className="eval">
+          <Engine position={game.fen()} />
         </div>
       </div>
       <div className="save-container">
