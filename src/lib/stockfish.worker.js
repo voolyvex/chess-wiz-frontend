@@ -1,4 +1,4 @@
-import Stockfish from "stockfish.js";
+import Stockfish from "./stockfish.js";
 
 var Module = {};
 
