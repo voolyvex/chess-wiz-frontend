@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import Stockfish from '../../lib/stockfish.js';
+import Worker from '../../lib/stockfish.worker.js';
+
 
 
 
@@ -9,7 +10,7 @@ const Engine = ({ position }) => {
 
   useEffect(() => {
     // Create an instance of the Stockfish engine
-    const stockfish = new Stockfish();
+    const stockfish = new Worker();
     stockfishRef.current = stockfish;
 
     // Add a message listener to receive messages from the engine

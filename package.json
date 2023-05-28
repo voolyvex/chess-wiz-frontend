@@ -47,7 +47,8 @@
     ]
   },
   "devDependencies": {
-    "webpack-node-externals": "^3.0.0"
+    "webpack-node-externals": "^3.0.0",
+    "worker-loader": "^3.0.8"
   },
   "resolutions": {
     "webpack": {
